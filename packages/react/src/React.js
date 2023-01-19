@@ -1,4 +1,4 @@
-const ReactVersion='18.2.0'
+const ReactVersion = '18.2.0'
 import {
     REACT_FRAGMENT_TYPE,
     REACT_DEBUG_TRACING_MODE_TYPE,
@@ -12,9 +12,9 @@ import {
     REACT_CACHE_TYPE,
     REACT_TRACING_MARKER_TYPE
 } from 'shared/ReactSymbols'
-import { Component,PureComponent } from './ReactBaseClasses'
-import {createRef} from './ReactCreateRef'
-import {forEach,map,count,toArray,only} from './ReactChildren'
+import { Component, PureComponent } from './ReactBaseClasses'
+import { createRef } from './ReactCreateRef'
+import { forEach, map, count, toArray, only } from './ReactChildren'
 import {
     createElement as createElementProd,
     createFactory as createFactoryProd,
@@ -22,10 +22,10 @@ import {
     isValidElement
 } from './ReactElement'
 import { createContext } from './ReactContext'
-import {lazy} from './ReactLazy'
-import {forwardRef} from './ReactForwardRef'
-import {memo} from './ReactMemo'
-import {cache} from './ReactCache'
+import { lazy } from './ReactLazy'
+import { forwardRef } from './ReactForwardRef'
+import { memo } from './ReactMemo'
+import { cache } from './ReactCache'
 import {
     getCacheSignal,
     getCacheForType,
@@ -55,17 +55,17 @@ import {
     createFactoryWithValidation,
     cloneElementWithValidation
 } from './ReactElementValidator'
-import {createServerContext} from './ReactServerContext'
+import { createServerContext } from './ReactServerContext'
 import { createMutableSource } from './ReactMutableSource'
 import ReactSharedInternals from './ReactSharedInternals'
-import {startTransition} from './ReactStartTransition'
-import {act} from './ReactAct'
+import { startTransition } from './ReactStartTransition'
+import { act } from './ReactAct'
 
 // 重新组合导出字段
-const createElement:any=createElementProd
-const cloneElement:any=cloneElementProd
-const createFactory:any=createFactoryProd
-const Children={
+const createElement: any = createElementProd
+const cloneElement: any = cloneElementProd
+const createFactory: any = createFactoryProd
+const Children = {
     map,
     forEach,
     count,
