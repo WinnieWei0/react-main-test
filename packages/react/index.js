@@ -11,4 +11,5 @@ export {
   PureComponent,
   Fragment,
   Profiler,
+  StrictMode,
 } from './src/React'
