@@ -12,4 +12,5 @@ export {
   Fragment,
   Profiler,
   StrictMode,
+  Suspense,
 } from './src/React'
