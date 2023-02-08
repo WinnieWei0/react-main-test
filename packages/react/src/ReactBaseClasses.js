@@ -1,7 +1,14 @@
 
 import ReactNoopUpdateQueue from './ReactNoopUpdateQueue'
+import assign from 'shared/assign'
+
+const emptyObject = {}
+if (__DEV__) {
+  // 冻结对象，后续不需要做改变
+  Object.freeze(emptyObject)
+}
 /**
- * @description: 组件更新状态的基类助手。
+ * @description: 组件更新状态的基类助手,包含props、refs等的实现
  * @param {*} props
  * @param {*} context
  * @param {*} updater
@@ -67,5 +74,23 @@ if (__DEV__) {
 
 function ComponentDummy() { }
 ComponentDummy.prototype = Component.prototype
+
+/**
+ * @description: 同Component，增加了shouldComponentUpdate()方法，组件相同的props和state不需要重复渲染
+ * @param {*} props
+ * @param {*} context
+ * @param {*} updater
+ * @return {*}
+ */
+function PureComponent(props, context, updater) {
+  this.props = props
+  this.context = context
+  this.refs = emptyObject
+  this.updater = updater || ReactNoopUpdateQueue
+}
+const pureComponentPrototype = (PureComponent.prototype = new ComponentDummy())
+pureComponentPrototype.constructor = PureComponent
+assign(pureComponentPrototype, Component.prototype)
+pureComponentPrototype.isPureReactComponent = true
 
 export { Component }

@@ -8,5 +8,7 @@
 export {
   Children,
   Component,
+  PureComponent,
   Fragment,
+  Profiler,
 } from './src/React'
