@@ -13,4 +13,5 @@ export {
   Profiler,
   StrictMode,
   Suspense,
+  SuspenseList,
 } from './src/React'
