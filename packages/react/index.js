@@ -7,5 +7,6 @@
 
 export {
   Children,
-  Component
+  Component,
+  Fragment,
 } from './src/React'

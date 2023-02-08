@@ -1,6 +1,7 @@
 // 暴露的方法内容
 import { map, forEach, count, toArray, only } from './ReactChildren'
 import { Component } from './ReactBaseClasses'
+import {REACT_FRAGMENT_TYPE} from 'shared/ReactSymbols'
 /**React.Children 提供了用于处理 this.props.children 不透明数据结构的实用方法。https://zh-hans.reactjs.org/docs/react-api.html#reactchildren
  * 
  */
@@ -14,4 +15,5 @@ const Children = {
 export {
   Children,
   Component,
+  REACT_FRAGMENT_TYPE as Fragment,
 } 
