@@ -14,4 +14,6 @@ export {
   StrictMode,
   Suspense,
   SuspenseList,
+  cloneElement,
+  createContext,
 } from './src/React'
